@@ -78,7 +78,9 @@ flex-wrap: wrap;
   font-size: 30px;
   font-weight: 600;
 }
-
+.bubble:hover{
+  background-color:#42445A61;
+}
 #btn{
   margin-top: 60px;
   width:200px;
