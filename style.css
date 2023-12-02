@@ -5,23 +5,87 @@
 }
 
 html,body{
-  width: 720px;
-  height: 1300px;
+  width: 900px;
+  height: 1400px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin:100px;
 }
 .main{
-  width: 80%;
-  height: 80%;
+  position: relative;
+  justify-content: center;
+  width: 99%;
+  height: 99%;
   background-color: skyblue;
   border-radius: 15px;
   position: relative; 
   overflow: hidden;
 }
+.top{
+  background-color:darkcyan;
+  width: 100%;
+}
+
+.top-line{
+  width :90%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  left: 20px;
+  top: 40px;
+  
+}
+#arrow{
+  color:white;
+  font-size: 50px;
+}
+#replay{
+  color:white;
+  font-size: 50px;
+  transparent:0%;
+}
+#tdot{
+  color:white;
+  font-size: 50px;
+  right: 0px;
+}
+.about{
+  font-size: 45px;
+  width:500px;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin:0 auto;
+  margin-top: 200px;
+}
+#Hscore{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 40px;
+}
+#start{
+  margin: 130px 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  Color: Blue;
+  width: 300px;
+  height:80px;
+  font-size: 40px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+}
+#start:hover{
+  background-color: #57596961;
+}
 #score-b{
   width: 100%;
-  height: 110px;
+  height: 130px;
   background-color: darkcyan;
   display: flex;
   justify-content: center;
@@ -33,11 +97,12 @@ html,body{
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 5px 25px;
+  margin: 2px 30px;
   color: white;
+  margin-top: 70px;
 }
 .box-main h3{
-  font-size: 30px;
+  font-size: 45px;
 }
 .box{
   color: darkgreen;
@@ -45,17 +110,19 @@ html,body{
   justify-content: center;
   align-items: center;
   display: flex;
-  width:50px;
-  height: 30px;
+  width:60px;
+  height: 40px;
   border-radius: 5px;
   background-color: white;
   color:black;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 800;
 }
 .bubble-c{
 display: flex;
 flex-wrap: wrap;
+overflow: auto;
+padding: 30px;
 }
 .gameOver {
   font-size: 50px;
@@ -67,20 +134,21 @@ flex-wrap: wrap;
 .bubble{
   margin:5px 5px;
   gap:10px;
-  width: 72px;
-  height: 72px;
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
   background-color: greenyellow;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 700;
 }
 .bubble:hover{
   background-color:#42445A61;
 }
+
 #btn{
   margin-top: 60px;
   width:200px;
