@@ -1,15 +1,15 @@
 var hitNum=0;
 var s;
 var hScore=0;
+var time;
 
 function makeBubble(){
 var bubbles =""; 
-for(i=1;i<=77;i++){
+for(i=1;i<=45;i++){
   bubbles +=`<div class="bubble">${Math.floor(Math.random()*10)}</div>`;
   }
 document.querySelector(".bubble-c").innerHTML = bubbles;
 }
-
 
 
 function timeInterval(){ 
@@ -30,15 +30,14 @@ var t = setInterval(function(){
     <h class="gameScore" > SCORE: ${s}<h/> <br><h>Highest Score: ${hScore}<h/><div/> <button id="btn" >Play Again<button/>`
     var btn=document.getElementById("btn")
     btn.onclick = function(a){
-      makeBubble()
-      timeInterval()
-      newhit()
-      raiseScore()
+      makeBubble(a)
+      timeInterval(a)
+      newhit(a)
+      raiseScore(a)
     }
   }
  },1000)
  }
- 
  
  
  function newhit(){
@@ -48,9 +47,9 @@ let  hit = document.getElementById("hit")
  }
  
  
- 
  function raiseScore(){
-  s=0
+  s=0;
+  var replay = document.querySelector("#replay")
   let score=document.getElementById("score")
   let bubble=document.querySelector(".bubble-c")
  bubble.addEventListener("click",function(dets) {
@@ -67,9 +66,32 @@ score.innerHTML=s;
  })
  }
  
+ function replay()
+ {
+   var replay=document.querySelector("#replay")
+   let score=document.getElementById("score")
+   
+   replay.addEventListener("click",function(e){
+     score.innerHTML=0;
+     makeBubble(e);
+     newhit(e);
+     raiseScore(e);
+     time=30;
+   })
+ }
+ 
  makeBubble();
  timeInterval();
  newhit();
  raiseScore();
- 
- 
+ replay();
+
+ function Score() {
+   var hightScore = document.querySelector(".highest");
+   var tdot=document.querySelector("#tdot");
+   tdot.onclick=function(){
+     hightScore.innerHtml=`Highest Score: ${hScore}`;
+     
+   }
+ }
+ Score();
