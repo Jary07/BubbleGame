@@ -27,13 +27,24 @@ var t = setInterval(function(){
     clearInterval(t);
     bubbleContainer = document.querySelector(".bubble-c")
     bubbleContainer.innerHTML = `<div class="gameOver"><br><br><br><h class="gameScore" >GAME OVER<h/> <br>
-    <h class="gameScore" > SCORE: ${s}<h/> <br><h>Highest Score: ${hScore}<h/><div/> <button id="btn" >Play Again<button/>`
-    var btn=document.getElementById("btn")
-    btn.onclick = function(a){
+    <h class="gameScore" > SCORE: ${s}<h/> <br><h>Highest Score: ${hScore}<h/><div/> <br><br>
+    <div><button class="btn" id="playAgain">Play Again<button/></div>
+    <div><button class="btn" id="exit">Exit</button></div>
+    `
+    let top=document.querySelector(".top")
+    top.style.display="none";
+    var playAgain=document.getElementById("playAgain")
+    var exit=document.getElementById("exit")
+    playAgain.onclick = function(a){
+      top.style.display="inline-block";
       makeBubble(a)
       timeInterval(a)
       newhit(a)
       raiseScore(a)
+    }
+    
+    exit.onclick= function(){
+      window.location="index.html";
     }
   }
  },1000)
